@@ -53,13 +53,13 @@ MEDIUM_WINDOW: int = 200  # ~20 seconds
 LONG_WINDOW: int = 400    # ~40 seconds
 
 # ─── Risk Management ─────────────────────────────────────────────────────────
-INITIAL_CAPITAL: float = float(os.getenv("INITIAL_CAPITAL", "300"))
+INITIAL_CAPITAL: float = float(os.getenv("INITIAL_CAPITAL", "5"))
 
 # Max fraction of current balance risked per trade (Kelly-inspired)
-MAX_POSITION_FRACTION: float = 0.08   # 8% per trade
+MAX_POSITION_FRACTION: float = 0.15   # 15% per trade (higher for small balance)
 
 # Absolute min/max order size in shares
-MIN_ORDER_SHARES: float = 2.0
+MIN_ORDER_SHARES: float = 1.0
 MAX_ORDER_SHARES: float = 200.0
 
 # Stop all trading for the day if total loss exceeds this fraction
